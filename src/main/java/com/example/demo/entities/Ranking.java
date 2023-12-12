@@ -2,7 +2,6 @@ package com.example.demo.entities;
 
 
 import com.example.demo.embeddable.RankId;
-import com.imsouane.aftas.domain.entities.embeddable.RankId;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
