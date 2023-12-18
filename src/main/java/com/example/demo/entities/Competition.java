@@ -18,7 +18,6 @@ import java.util.List;
 @Builder
 public class Competition {
     @Id
-    @Pattern(regexp = "^[a-z]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$", message = "Code must be in the format of sss-dd-mm-yy")
     private String code;
 
     @NotNull

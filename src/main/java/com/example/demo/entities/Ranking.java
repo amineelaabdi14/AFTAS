@@ -1,6 +1,5 @@
 package com.example.demo.entities;
 
-
 import com.example.demo.embeddable.RankId;
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,7 +8,6 @@ import org.hibernate.annotations.ColumnDefault;
 @Entity
 @Getter
 @Setter
-@ToString
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
@@ -32,5 +30,4 @@ public class Ranking {
 
     @ColumnDefault("0")
     private Integer score;
-
 }
