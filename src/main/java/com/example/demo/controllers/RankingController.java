@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.dto.competitionDTO.CompetitionRankingsResponseDto;
+import com.example.demo.dto.memberDTO.MemberResponseDto;
 import com.example.demo.dto.rankingDTO.RankingResponseDto;
 import com.example.demo.dto.rankingDTO.RegistrationRequestDto;
 import com.example.demo.services.RankingService;
@@ -8,6 +9,8 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/rankings")
@@ -30,6 +33,7 @@ public class RankingController {
     public ResponseEntity<CompetitionRankingsResponseDto> findPodiumByCompetitionCode(@PathVariable String code) {
         return ResponseEntity.ok(CompetitionRankingsResponseDto.fromCompetitionAndRankings(code, RankingResponseDto.fromRankings(rankingService.findPodiumByCompetitionCode(code))));
     }
+
 
 
 }

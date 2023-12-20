@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.entities.Competition;
+import com.example.demo.entities.Ranking;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Pageable;
 
@@ -14,5 +15,8 @@ public interface CompetitionService {
 
     Competition findByCode(String code);
 
+    Long count();
     void delete(Competition competition);
+
+    List<Ranking> getRankingByCompetitionCode(String code);
 }

@@ -1,4 +1,4 @@
-package com.imsouane.aftas.config;
+package com.example.demo.config;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletResponse;
